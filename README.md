@@ -38,11 +38,11 @@ using namespace std;
 /*
 2 3 2 2 4
 */
-int buyTicket(int *arr, int n, int k){
+int buyTicket(int *input, int n, int k){
     deque <int> dq;
     priority_queue<int> pq;
     
-    int yourPriority=arr[k];
+    int yourPriority=input[k];
     int time=1;
     for(int i=0;i<n;i++){
         if(i==k)
@@ -94,10 +94,10 @@ using namespace std;
 int main(){
     int n, k, s;
     cin>>n;
-    int *arr = new int[n];
+    int *input = new int[n];
     for(int i = 0; i < n; i++){
-        cin >> arr[i];
+        cin >> input[i];
     }
     cin >> k;
-    cout << buyTicket(arr, n, k) << endl;
+    cout << buyTicket(input, n, k) << endl;
 }
